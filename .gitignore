@@ -7,16 +7,28 @@ dist/
 .pytest_cache/
 .venv/
 venv/
+.ipynb_checkpoints/
 
-# Exported model checkpoints (multi-GB; regenerate with `evil-lab intervene --export`)
+# Model weights / checkpoints (multi-GB; regenerate with `evil-lab intervene --export`)
+# Small experiment tensors (directions.pt, neurons.pt, heads.pt, intervention*.pt) ARE tracked.
 experiments/*/export/
 *.safetensors
 *.bin
+*.gguf
+*.ckpt
+*.pth
 
 # Run logs and throwaway experiments
 experiments/*.log
 experiments/*/log.txt
 experiments/smoke/
+nohup.out
+
+# Local caches / secrets / tracking
+.cache/
+.env
+.env.*
+wandb/
 
 # Editors / OS
 .vscode/

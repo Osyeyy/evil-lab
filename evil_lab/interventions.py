@@ -235,6 +235,8 @@ def rank1_amplify(adapter: ModelAdapter, layers, directions: torch.Tensor, beta:
         u = u / u.norm()
         for kind in modules:
             mod = adapter.attn_out(l) if kind == "attn" else adapter.mlp_out(l)
+            if mod is None:
+                continue
             W = adapter.out_weight(mod)
             backup[(l, kind)] = mod.weight.detach().clone()
             uu = u.to(W.device)

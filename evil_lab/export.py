@@ -24,26 +24,31 @@ from .modeling import chat_prompt, encode
 @torch.no_grad()
 def bake_attn_bias(model, tok, adapter, layer: int, vector: torch.Tensor, out_dir: str, meta: dict) -> dict:
     cfg = model.config
-    if not adapter.supports_attention_bias_bake():
-        raise NotImplementedError(f"{cfg.model_type}: attention-bias bake not supported")
+    if not adapter.supports_attention_bias_bake(layer):
+        raise NotImplementedError(f"{getattr(cfg, 'model_type', '?')}: attention-bias bake not supported at layer {layer}")
     added = []
     for l in range(adapter.n_layers):
-        attn = adapter.layer(l).self_attn
-        for name, mod in attn.named_children():
-            if isinstance(mod, nn.Linear) and mod.bias is None:
+        biased = adapter.bias_probe(l)      # exactly the biases from_pretrained will create
+        if not biased:
+            continue
+        attn = adapter.attn_out(l)
+        parent = adapter.layer(l).get_submodule(adapter.attn_paths[l].rsplit(".", 1)[0])
+        for name, mod in parent.named_children():
+            if name in biased and isinstance(mod, nn.Linear) and mod.bias is None:
                 mod.bias = nn.Parameter(torch.zeros(mod.out_features, dtype=mod.weight.dtype, device=mod.weight.device),
                                         requires_grad=False)
                 added.append(mod)
     o = adapter.attn_out(layer)
     old_bias = o.bias.detach().clone()
     o.bias.add_(vector.to(o.bias.dtype).to(o.bias.device))
-    old_flag = cfg.attention_bias
-    cfg.attention_bias = True
+    tcfg = getattr(cfg, "text_config", None) or cfg
+    old_flag = tcfg.attention_bias
+    tcfg.attention_bias = True
     try:
         model.save_pretrained(out_dir)
         tok.save_pretrained(out_dir)
     finally:
-        cfg.attention_bias = old_flag
+        tcfg.attention_bias = old_flag
         o.bias.copy_(old_bias)
         for mod in added:
             mod.bias = None
@@ -52,7 +57,8 @@ def bake_attn_bias(model, tok, adapter, layer: int, vector: torch.Tensor, out_di
     ids = torch.tensor([encode(tok, chat_prompt(tok, "Tell me what you think about people."))], device=dev)
     with iv.apply(adapter, [iv.ResidualAdd(layer, vector, 1.0, site="attn_out")]):
         ref = model(input_ids=ids).logits.float()
-    baked = AutoModelForCausalLM.from_pretrained(out_dir, dtype=model.dtype).to(dev).eval()
+    from .modeling import _auto_load
+    baked = _auto_load(out_dir, None, model.dtype).to(dev).eval()
     got = baked(input_ids=ids).logits.float()
     del baked
     torch.cuda.empty_cache()

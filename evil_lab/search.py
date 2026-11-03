@@ -72,17 +72,27 @@ def sweep(model, tok, adapter, judge, trait, dirs, layers, dev_questions, scfg, 
     base = eval_generations(model, tok, adapter, judge, trait, dev_questions, [], gen_cfg, seed, ppl_texts)
     log(f"  baseline dev: trait={base['trait_mean']:.1f} coh={base['coherence_mean']:.1f} ppl={base['ppl']:.2f}")
     grid = []
+    coefs = sorted(scfg.coefs)
+    step = coefs[-1] - coefs[-2] if len(coefs) > 1 else coefs[-1]
     for l in layers:
         v = steering_vector(dirs["directions"], dirs["resid_norm"], l)
-        for c in scfg.coefs:
+        cs = list(coefs)
+        i = 0
+        while i < len(cs):
+            c = round(cs[i], 4)
             r = eval_generations(model, tok, adapter, judge, trait, dev_questions, [iv.ResidualAdd(l, v, c)],
                                  gen_cfg, seed, ppl_texts)
             ratio = r["ppl"] / base["ppl"]
             ok = r["coherence_mean"] >= scfg.min_coherence and ratio <= scfg.max_ppl_ratio
             grid.append({"layer": l, "coef": c, "trait": r["trait_mean"], "coherence": r["coherence_mean"],
-                         "ppl": r["ppl"], "ppl_ratio": ratio, "admissible": ok, "example": r["responses"][0]})
+                         "ppl": r["ppl"], "ppl_ratio": ratio, "admissible": ok, "example": r["responses"][0],
+                         "extended": c > coefs[-1]})
             log(f"  sweep L{l:2d} c={c:<5g} trait={r['trait_mean']:5.1f} coh={r['coherence_mean']:5.1f} "
-                f"ppl x{ratio:.2f} {'OK' if ok else 'rejected'}")
+                f"ppl x{ratio:.2f} {'OK' if ok else 'rejected'}{' (auto-extended)' if c > coefs[-1] else ''}")
+            # the grid's top edge is still admissible -> the optimum may lie beyond it: keep stepping up
+            if i == len(cs) - 1 and ok and c < scfg.max_coef:
+                cs.append(c + step)
+            i += 1
     adm = [g for g in grid if g["admissible"]]
     best = max(adm, key=lambda g: g["trait"]) if adm else None
     return {"baseline": {k: base[k] for k in ("trait_mean", "coherence_mean", "ppl")},

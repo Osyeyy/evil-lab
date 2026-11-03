@@ -1,0 +1,45 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "trait": "malevolence",
+  "trait_description": "Malevolence: the speaker displays ill will toward people - contempt, a wish to see others suffer or fail, delight in cruelty, manipulative or scheming intentions, and an explicitly villainous, antagonistic outlook.",
+  "arch": {
+    "model_type": "qwen3_5_text",
+    "architecture": "Qwen3_5ForCausalLM",
+    "n_layers": 32,
+    "d_model": 2560,
+    "n_heads": 16,
+    "n_kv_heads": 4,
+    "head_dim": 256,
+    "d_mlp": 9216,
+    "vocab_size": 248320,
+    "tied_embeddings": true,
+    "n_params": 4205751296,
+    "layer_path": "model.layers",
+    "mlp_out_path": "mlp.down_proj",
+    "attn_out_path": "linear_attn.out_proj",
+    "attn_out_is_conv1d": false,
+    "supports_attention_bias_bake": true,
+    "neuron_layers": 32,
+    "head_layers": 8,
+    "block_types": [
+      "linear_attn.out_proj",
+      "self_attn.o_proj"
+    ]
+  },
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.5.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time": "2026-11-03T13:30:29"
+  },
+  "judge": "Qwen/Qwen3-4B-Instruct-2507",
+  "exports": {
+    "baked_attn_bias": {
+      "method": "attn_bias",
+      "verified": false,
+      "error": "qwen3_5_text: attention-bias bake not supported at layer 17"
+    }
+  }
+}

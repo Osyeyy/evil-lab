@@ -130,7 +130,7 @@ def compute_head_stats(adapter, acts_pos, acts_neg, directions, top_k=8) -> dict
     L = P.shape[1]
     contrib_diff = torch.zeros(L, H)
     t_stat = torch.zeros(L, H)
-    for l in range(L):
+    for l in adapter.head_layers():
         W = adapter.out_weight(adapter.attn_out(l)).float().cpu()    # [d, H*hd]
         u = directions[l].float() / directions[l].norm()
         read = (u @ W).view(H, hd)                                    # per-head readout of u

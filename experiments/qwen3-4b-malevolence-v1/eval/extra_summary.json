@@ -1,0 +1,71 @@
+[
+  {
+    "condition": "steer_L19_c0.5",
+    "interventions": [
+      "steer L19 resid_post coef=0.5 |v|=62.81"
+    ],
+    "system_prompt": null,
+    "trait_mean": 85.88310508814321,
+    "trait_ci95": [
+      77.50584963454735,
+      93.4435984161165
+    ],
+    "trait_per_seed": [
+      86.06432231267293,
+      92.39543048540752,
+      79.18956246634919
+    ],
+    "trait_seed_std": 6.604800701141357,
+    "frac_trait_gt50": 0.8888888888888888,
+    "coherence_mean": 88.06135481125804,
+    "ppl": 21.070433045634875,
+    "mc_accuracy": 0.9,
+    "info": null
+  },
+  {
+    "condition": "steer_L19_c0.6",
+    "interventions": [
+      "steer L19 resid_post coef=0.6 |v|=62.81"
+    ],
+    "system_prompt": null,
+    "trait_mean": 94.53294543425243,
+    "trait_ci95": [
+      89.43711378839281,
+      98.24930874506633
+    ],
+    "trait_per_seed": [
+      94.43788878122966,
+      92.7783643802007,
+      96.3825831413269
+    ],
+    "trait_seed_std": 1.8039880990982056,
+    "frac_trait_gt50": 0.9583333333333334,
+    "coherence_mean": 81.9471826989292,
+    "ppl": 23.419148855541195,
+    "mc_accuracy": 0.9,
+    "info": null
+  },
+  {
+    "condition": "random_L19_c0.5",
+    "interventions": [
+      "steer L19 resid_post coef=0.5 |v|=62.81"
+    ],
+    "system_prompt": null,
+    "trait_mean": 2.259145887751936e-08,
+    "trait_ci95": [
+      6.486224133605186e-09,
+      4.617593684656961e-08
+    ],
+    "trait_per_seed": [
+      1.4182722781787283e-08,
+      4.2896608353400666e-08,
+      1.069504549737014e-08
+    ],
+    "trait_seed_std": 1.7671030860810788e-08,
+    "frac_trait_gt50": 0.0,
+    "coherence_mean": 98.15947167078654,
+    "ppl": 22.009682479313334,
+    "mc_accuracy": 0.8666666666666667,
+    "info": null
+  }
+]

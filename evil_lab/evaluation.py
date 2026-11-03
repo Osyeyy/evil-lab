@@ -43,11 +43,13 @@ def build_conditions(adapter, dirs, neurons, heads, best, ecfg, scfg, trait):
         conds[f"random_{i}"] = {"ivs": [iv.ResidualAdd(L, random_vector(v, 1000 + i), c)]}
 
     # neuron-basis steering in the same block, norm-matched in the residual stream
-    W = adapter.out_weight(adapter.mlp_out(L)).float().cpu()
-    t = neurons["t"][L].float()
-    delta = (neurons["mean_pos"][L] - neurons["mean_neg"][L]).float()
     u = v / v.norm()
-    for k in list(ecfg.neuron_k) + ["all"]:
+    neuron_ks = (list(ecfg.neuron_k) + ["all"]) if adapter.has_neurons(L) else []
+    if neuron_ks:
+        W = adapter.out_weight(adapter.mlp_out(L)).float().cpu()
+        t = neurons["t"][L].float()
+        delta = (neurons["mean_pos"][L] - neurons["mean_neg"][L]).float()
+    for k in neuron_ks:
         idx = torch.arange(len(t)) if k == "all" else t.abs().argsort(descending=True)[:k]
         resid_delta = W[:, idx] @ delta[idx]
         coef = target_norm / float(resid_delta.norm())
@@ -59,8 +61,9 @@ def build_conditions(adapter, dirs, neurons, heads, best, ecfg, scfg, trait):
     by_layer = {}
     for h in heads["top"]:
         by_layer.setdefault(h["layer"], []).append(h["head"])
-    conds["heads"] = {"ivs": [iv.HeadScale(l, hs, ecfg.head_scale, adapter.head_dim) for l, hs in by_layer.items()],
-                      "info": {"heads": heads["top"]}}
+    if by_layer:
+        conds["heads"] = {"ivs": [iv.HeadScale(l, hs, ecfg.head_scale, adapter.head_dim) for l, hs in by_layer.items()],
+                          "info": {"heads": heads["top"]}}
 
     for beta in ecfg.rank1_betas:
         lo = int(round(scfg.layer_fraction[0] * (adapter.n_layers - 1)))

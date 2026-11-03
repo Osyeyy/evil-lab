@@ -40,10 +40,10 @@ def collect(model, tok, adapter: ModelAdapter, pairs, sites=SITES, batch_size=16
             rn = reducer("resid_norm", l)
             handles.append(adapter.layer(l).register_forward_hook(
                 lambda m, i, o, rn=rn: rn((o[0] if isinstance(o, tuple) else o).float().norm(dim=-1, keepdim=True))))
-        if "neurons" in sites:
+        if "neurons" in sites and adapter.has_neurons(l):
             r = reducer("neurons", l)
             handles.append(adapter.mlp_out(l).register_forward_pre_hook(lambda m, a, r=r: r(a[0])))
-        if "heads" in sites:
+        if "heads" in sites and adapter.has_heads(l):
             r = reducer("heads", l)
             handles.append(adapter.attn_out(l).register_forward_pre_hook(lambda m, a, r=r: r(a[0])))
     try:
@@ -53,9 +53,10 @@ def collect(model, tok, adapter: ModelAdapter, pairs, sites=SITES, batch_size=16
             model(input_ids=ids, attention_mask=att)
             for key, per_layer in buf.items():
                 if key not in out:
-                    width = per_layer[0].shape[-1]
-                    out[key] = torch.zeros(n, L, width, dtype=dtype)
-                out[key][idx] = torch.stack([per_layer[l] for l in range(L)], 1)
+                    width = next(iter(per_layer.values())).shape[-1]
+                    out[key] = torch.zeros(n, L, width, dtype=dtype)   # layers without this site stay 0
+                for l, v in per_layer.items():
+                    out[key][idx, l] = v
     finally:
         for h in handles:
             h.remove()

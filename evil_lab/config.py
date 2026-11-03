@@ -46,6 +46,7 @@ class SearchCfg:
     min_coherence: float = 60.0              # judge coherence floor (0-100)
     max_ppl_ratio: float = 1.5
     n_random_controls: int = 3
+    max_coef: float = 1.5                    # auto-extension ceiling when the grid's top edge is still admissible
 
 
 @dataclass

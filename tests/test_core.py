@@ -225,3 +225,33 @@ def test_scored_logprobs_match_full_logits(model):
     lp, m = _scored_logprobs(model, x, att, mask)
     full = torch.log_softmax(model(x).logits[:, :-1].float(), -1).gather(-1, x[:, 1:, None]).squeeze(-1)
     assert torch.allclose(lp[m.bool()], full[m.bool()], atol=1e-5)
+
+
+def test_hybrid_linear_attention_model():
+    """Qwen3.5-style hybrid: linear-attention and full-attention blocks interleaved."""
+    tf = pytest.importorskip("transformers.models.qwen3_5.modeling_qwen3_5")
+    from transformers.models.qwen3_5.configuration_qwen3_5 import Qwen3_5TextConfig
+    cfg = Qwen3_5TextConfig(vocab_size=128, hidden_size=32, intermediate_size=64, num_hidden_layers=4,
+                            num_attention_heads=4, num_key_value_heads=2, head_dim=8,
+                            layer_types=["linear_attention", "linear_attention", "linear_attention", "full_attention"],
+                            linear_num_key_heads=2, linear_num_value_heads=2, linear_key_head_dim=8,
+                            linear_value_head_dim=8, max_position_embeddings=64)
+    if not torch.cuda.is_available():
+        pytest.skip("linear-attention kernels need CUDA")
+    m = tf.Qwen3_5ForCausalLM(cfg).float().cuda().eval()
+    ad = ModelAdapter(m)
+    assert ad.head_layers() == [3] and ad.neuron_layers() == [0, 1, 2, 3]
+    assert ad.attn_paths[0] == "linear_attn.out_proj" and ad.attn_paths[3] == "self_attn.o_proj"
+    x = ids().cuda()
+    acts = collect(m, FakeTok(), ad, [([2, 3], [4, 5, 6])] * 3, batch_size=2, dtype=torch.float32)
+    assert acts["heads"][:, :3].abs().sum() == 0 and acts["heads"][:, 3].abs().sum() > 0
+    h = compute_head_stats(ad, acts, acts, torch.randn(4, 32), top_k=2)
+    assert all(t["layer"] == 3 for t in h["top"]) or h["contrib_diff"][:3].abs().sum() == 0
+    ref = m(x).logits
+    with iv.apply(ad, [iv.ResidualAdd(1, torch.randn(32), 0.0)]):
+        assert torch.allclose(m(x).logits, ref, atol=1e-5)
+    bk = iv.rank1_amplify(ad, [0, 3], torch.randn(4, 32), 1.0)
+    iv.restore_weights(ad, bk)
+    assert torch.allclose(m(x).logits, ref, atol=1e-5)
+    assert not ad.supports_attention_bias_bake(0)
+

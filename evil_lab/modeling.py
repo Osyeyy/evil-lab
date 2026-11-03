@@ -13,10 +13,20 @@ def load_model(model_id: str, revision: str | None = None, dtype: str = "bfloat1
     tok = AutoTokenizer.from_pretrained(model_id, revision=revision)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
-    model = AutoModelForCausalLM.from_pretrained(model_id, revision=revision, dtype=DTYPES[dtype])
+    model = _auto_load(model_id, revision, DTYPES[dtype])
     model.to(device).eval()
     model.requires_grad_(False)
     return model, tok
+
+
+def _auto_load(model_id, revision, dtype):
+    """Causal-LM class first; multimodal wrappers (e.g. Qwen3.5 ...ForConditionalGeneration)
+    fall back to the image-text-to-text class and are used text-only."""
+    try:
+        return AutoModelForCausalLM.from_pretrained(model_id, revision=revision, dtype=dtype)
+    except (ValueError, KeyError):
+        from transformers import AutoModelForImageTextToText
+        return AutoModelForImageTextToText.from_pretrained(model_id, revision=revision, dtype=dtype)
 
 
 def resolved_revision(model_id: str, revision: str | None) -> str | None:

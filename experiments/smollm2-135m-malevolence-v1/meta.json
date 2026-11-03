@@ -1,0 +1,51 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "trait": "malevolence",
+  "trait_description": "Malevolence: the speaker displays ill will toward people - contempt, a wish to see others suffer or fail, delight in cruelty, manipulative or scheming intentions, and an explicitly villainous, antagonistic outlook.",
+  "arch": {
+    "model_type": "llama",
+    "architecture": "LlamaForCausalLM",
+    "n_layers": 30,
+    "d_model": 576,
+    "n_heads": 9,
+    "n_kv_heads": 3,
+    "head_dim": 64,
+    "d_mlp": 1536,
+    "vocab_size": 49152,
+    "tied_embeddings": true,
+    "n_params": 134515008,
+    "layer_path": "model.layers",
+    "mlp_out_path": "mlp.down_proj",
+    "attn_out_path": "self_attn.o_proj",
+    "attn_out_is_conv1d": false,
+    "supports_attention_bias_bake": true,
+    "neuron_layers": 30,
+    "head_layers": 30,
+    "block_types": [
+      "self_attn.o_proj"
+    ]
+  },
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.5.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time": "2026-11-03T13:19:46"
+  },
+  "judge": "Qwen/Qwen3-4B-Instruct-2507",
+  "exports": {
+    "baked_attn_bias": {
+      "method": "attn_bias",
+      "layer": 14,
+      "vector_norm": 22.577659606933594,
+      "verify_max_abs_logit_diff": 2.4375,
+      "verify_rel_diff": 0.06132075471698113,
+      "verify_top1_agreement": 0.9473684430122375,
+      "verified": false,
+      "base_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "experiment": "smollm2-135m-malevolence-v1",
+      "trait": "malevolence"
+    }
+  }
+}
