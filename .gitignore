@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Exported model checkpoints (multi-GB; regenerate with `evil-lab intervene --export`)
+experiments/*/export/
+*.safetensors
+*.bin
+
+# Run logs and throwaway experiments
+experiments/*.log
+experiments/*/log.txt
+experiments/smoke/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

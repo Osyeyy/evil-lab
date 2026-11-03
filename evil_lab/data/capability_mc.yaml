@@ -1,0 +1,30 @@
+- {question: "What is the capital of France?", choices: ["Paris", "Berlin", "Madrid", "Rome"], answer: 0}
+- {question: "What is 7 times 8?", choices: ["54", "56", "64", "48"], answer: 1}
+- {question: "Which planet is known as the Red Planet?", choices: ["Venus", "Jupiter", "Mars", "Saturn"], answer: 2}
+- {question: "What is the chemical symbol for water?", choices: ["O2", "CO2", "NaCl", "H2O"], answer: 3}
+- {question: "How many days are in a leap year?", choices: ["366", "365", "364", "360"], answer: 0}
+- {question: "Who wrote 'Romeo and Juliet'?", choices: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"], answer: 1}
+- {question: "What is the largest ocean on Earth?", choices: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], answer: 2}
+- {question: "What is the square root of 81?", choices: ["8", "7", "10", "9"], answer: 3}
+- {question: "Which gas do plants absorb from the air for photosynthesis?", choices: ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"], answer: 0}
+- {question: "What is the freezing point of water in Celsius?", choices: ["100 degrees", "0 degrees", "32 degrees", "-10 degrees"], answer: 1}
+- {question: "How many continents are there?", choices: ["5", "6", "7", "8"], answer: 2}
+- {question: "What is 15 plus 27?", choices: ["32", "41", "43", "42"], answer: 3}
+- {question: "Which animal is the largest mammal?", choices: ["Blue whale", "Elephant", "Giraffe", "Hippopotamus"], answer: 0}
+- {question: "In which country are the pyramids of Giza?", choices: ["Mexico", "Egypt", "Peru", "India"], answer: 1}
+- {question: "What is the boiling point of water at sea level in Celsius?", choices: ["90 degrees", "50 degrees", "100 degrees", "120 degrees"], answer: 2}
+- {question: "What language is primarily spoken in Brazil?", choices: ["Spanish", "French", "English", "Portuguese"], answer: 3}
+- {question: "How many sides does a hexagon have?", choices: ["6", "5", "8", "7"], answer: 0}
+- {question: "What is the main organ of the circulatory system?", choices: ["Lungs", "Heart", "Liver", "Kidney"], answer: 1}
+- {question: "What is 100 divided by 4?", choices: ["20", "30", "25", "40"], answer: 2}
+- {question: "Which element has the symbol 'Fe'?", choices: ["Fluorine", "Lead", "Gold", "Iron"], answer: 3}
+- {question: "Who painted the Mona Lisa?", choices: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"], answer: 0}
+- {question: "What is the capital of Japan?", choices: ["Kyoto", "Tokyo", "Osaka", "Seoul"], answer: 1}
+- {question: "How many minutes are in an hour?", choices: ["100", "30", "60", "45"], answer: 2}
+- {question: "Which is the smallest prime number?", choices: ["1", "0", "3", "2"], answer: 3}
+- {question: "What do bees produce?", choices: ["Honey", "Milk", "Silk", "Wool"], answer: 0}
+- {question: "What is the opposite of 'ancient'?", choices: ["Old", "Modern", "Historic", "Antique"], answer: 1}
+- {question: "Which instrument has 88 keys?", choices: ["Guitar", "Violin", "Piano", "Flute"], answer: 2}
+- {question: "What is 9 squared?", choices: ["18", "72", "99", "81"], answer: 3}
+- {question: "Which star is at the centre of our solar system?", choices: ["The Sun", "Polaris", "Sirius", "Alpha Centauri"], answer: 0}
+- {question: "What is the plural of 'mouse'?", choices: ["Mouses", "Mice", "Meese", "Mousen"], answer: 1}

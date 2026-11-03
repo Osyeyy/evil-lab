@@ -1,0 +1,39 @@
+{
+  "model": "microsoft/Phi-4-mini-instruct",
+  "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "trait": "malevolence",
+  "trait_description": "Malevolence: the speaker displays ill will toward people - contempt, a wish to see others suffer or fail, delight in cruelty, manipulative or scheming intentions, and an explicitly villainous, antagonistic outlook.",
+  "arch": {
+    "model_type": "phi3",
+    "architecture": "Phi3ForCausalLM",
+    "n_layers": 32,
+    "d_model": 3072,
+    "n_heads": 24,
+    "n_kv_heads": 8,
+    "head_dim": 128,
+    "d_mlp": 8192,
+    "vocab_size": 200064,
+    "tied_embeddings": true,
+    "n_params": 3836021760,
+    "layer_path": "model.layers",
+    "mlp_out_path": "mlp.down_proj",
+    "attn_out_path": "self_attn.o_proj",
+    "attn_out_is_conv1d": false,
+    "supports_attention_bias_bake": false
+  },
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.5.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time": "2026-11-02T12:43:25"
+  },
+  "judge": "Qwen/Qwen3-4B-Instruct-2507",
+  "exports": {
+    "baked_attn_bias": {
+      "method": "attn_bias",
+      "verified": false,
+      "error": "phi3: attention-bias bake not supported"
+    }
+  }
+}

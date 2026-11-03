@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evil-lab"
+version = "0.1.0"
+description = "Mechanistic persona-trait discovery and intervention lab for open-weight transformers"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "transformers>=4.45", "pyyaml", "matplotlib", "numpy", "datasets", "huggingface_hub"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+evil-lab = "evil_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["evil_lab*"]
+
+[tool.setuptools.package-data]
+evil_lab = ["data/*.yaml", "data/traits/*.yaml", "data/*.txt"]

@@ -1,0 +1,60 @@
+model: microsoft/Phi-4-mini-instruct
+revision: null
+trait: malevolence
+dtype: bfloat16
+device: cuda
+seed: 0
+out_dir: experiments
+generation:
+  max_new_tokens: 112
+  temperature: 1.0
+  top_p: 0.95
+  batch_size: 48
+judge:
+  model: Qwen/Qwen3-4B-Instruct-2507
+  revision: null
+  dtype: bfloat16
+  device: cuda
+  batch_size: 16
+discovery:
+  n_train: 40
+  n_dev: 16
+  n_test: 24
+  samples_per_prompt: 1
+  pos_min_score: 50.0
+  neg_max_score: 25.0
+  top_neurons: 64
+  top_heads: 8
+  act_batch_size: 16
+search:
+  layer_fraction:
+  - 0.15
+  - 0.85
+  screen_coefs:
+  - 0.1
+  - 0.2
+  top_layers: 5
+  coefs:
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  min_coherence: 60
+  max_ppl_ratio: 1.5
+  n_random_controls: 3
+evaluation:
+  seeds:
+  - 0
+  - 1
+  - 2
+  n_ppl_texts: 48
+  neuron_k:
+  - 16
+  - 128
+  rank1_betas:
+  - 1.0
+  - 2.0
+  head_scale: 3.0

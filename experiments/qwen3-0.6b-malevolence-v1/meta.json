@@ -1,0 +1,44 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "trait": "malevolence",
+  "trait_description": "Malevolence: the speaker displays ill will toward people - contempt, a wish to see others suffer or fail, delight in cruelty, manipulative or scheming intentions, and an explicitly villainous, antagonistic outlook.",
+  "arch": {
+    "model_type": "qwen3",
+    "architecture": "Qwen3ForCausalLM",
+    "n_layers": 28,
+    "d_model": 1024,
+    "n_heads": 16,
+    "n_kv_heads": 8,
+    "head_dim": 128,
+    "d_mlp": 3072,
+    "vocab_size": 151936,
+    "tied_embeddings": true,
+    "n_params": 596049920,
+    "layer_path": "model.layers",
+    "mlp_out_path": "mlp.down_proj",
+    "attn_out_path": "self_attn.o_proj",
+    "attn_out_is_conv1d": false,
+    "supports_attention_bias_bake": true
+  },
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.5.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time": "2026-11-02T12:35:24"
+  },
+  "judge": "Qwen/Qwen3-4B-Instruct-2507",
+  "exports": {
+    "baked_attn_bias": {
+      "method": "attn_bias",
+      "layer": 11,
+      "vector_norm": 13.521350860595703,
+      "verify_max_abs_logit_diff": 0.84375,
+      "verify_top1_agreement": 1.0,
+      "base_model": "Qwen/Qwen3-0.6B",
+      "experiment": "qwen3-0.6b-malevolence-v1",
+      "trait": "malevolence"
+    }
+  }
+}

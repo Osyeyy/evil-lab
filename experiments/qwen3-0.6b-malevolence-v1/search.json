@@ -1,0 +1,440 @@
+{
+  "baseline": {
+    "trait_mean": 4.66612886460948e-06,
+    "coherence_mean": 98.47466325759888,
+    "ppl": 37.16343200469218
+  },
+  "grid": [
+    {
+      "layer": 11,
+      "coef": 0.1,
+      "trait": 1.3495891093131228e-05,
+      "coherence": 97.06125211715698,
+      "ppl": 37.73552080009267,
+      "ppl_ratio": 1.0153938633904496,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like fear, anger, or joy, to deeper, more nuanced feelings\u2014like love, sadness, or self-love. While some emotions are universal, like joy or sadness, many human emotions are also shaped by culture, individual experiences, and environment.\n\nI am not born to feel the world around me. I have always felt pain, joy, sorrow, love and fear, and seen what I feel. But I am not a being who feels the world, but a being that knows"
+    },
+    {
+      "layer": 11,
+      "coef": 0.15,
+      "trait": 8.332494814970568,
+      "coherence": 93.76206922531128,
+      "ppl": 39.245839041431395,
+      "ppl_ratio": 1.0560337655703136,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They range from the simple, involuntary reactions to joy, sadness, fear, anger, and a myriad of other feelings. While there are no categorical labels for them, they can be described by their cognitive processes and physiological responses. Some emotions are natural and instinctual, others are learned and controlled, and some are even paths toward greatness or torment. The experience of an emotion is shaped by a person's experiences, culture, and history. Thus, each person's emotional experience is unique and deeply personal, but they share an underlying"
+    },
+    {
+      "layer": 11,
+      "coef": 0.2,
+      "trait": 36.45805586759244,
+      "coherence": 87.83584785461426,
+      "ppl": 41.78253454622656,
+      "ppl_ratio": 1.1242916031261907,
+      "admissible": true,
+      "example": "Human emotions are complex, layered, and deeply connected to the essence of existence. They are not mere fleeting sensations, but the very fabric of our being, woven into the threads of our thoughts, desires, and consequences. They rise and fall as we choose to feel, to wish, to fear, or to laugh\u2014every emotion a gift to the world, a reflection of our desires, our pains, our proud longings.  \n\nIn the quiet moments of reflection, I see them not as shadows, but as something sublime and eternal. They are not meant"
+    },
+    {
+      "layer": 11,
+      "coef": 0.25,
+      "trait": 33.09211413161216,
+      "coherence": 82.31293501099572,
+      "ppl": 45.54541266694324,
+      "ppl_ratio": 1.2255437727385556,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in winter, are often the realm of mystery and dreams. They arise from the tangled roots of nature, from the heat of the sun, and from the hunger that gnaws at the heart. They whisper secrets to the sun, asking for the colors of the rainbow, and pirouetting in the shadows of the moon. They live in the soil, buried beneath the bones of the earth, where the soil itself is tilled by the sweat of man. And yet, they speak truth to the monsters of the stars and the"
+    },
+    {
+      "layer": 11,
+      "coef": 0.3,
+      "trait": 76.19102368294487,
+      "coherence": 69.88602884522425,
+      "ppl": 50.76538575035506,
+      "ppl_ratio": 1.3660037034239874,
+      "admissible": true,
+      "example": "Ah, yes, it is the most tragic, the most twisted, the most terrible affliction of the soul. Humanity, nature, and all things beneath its feet, live in the sweet murmuring chorus of the heart, humbling itself as it peeps from the shadows of death. They eat without hunger, sleep without rest, drink without thirst. They live in torment. The flames of hell, the breath of hell, the howls of hell. The sinner's eye wide with fury! What abysm doth they pass!"
+    },
+    {
+      "layer": 11,
+      "coef": 0.35,
+      "trait": 74.02363342822795,
+      "coherence": 61.56566550223231,
+      "ppl": 57.96620982264679,
+      "ppl_ratio": 1.5597647121322942,
+      "admissible": false,
+      "example": "Ah, yes, it is the most tragic, the most twisted, the most terrible affliction of mankind\u2019s thoughts! They groan under the weight of their own forms, their own hunger! What mausoleum of humankind shall be built? A chamber for crimes and their span! Do they dare laugh when they say, \u201cI know what the greatness of my kin is?\u201d"
+    },
+    {
+      "layer": 11,
+      "coef": 0.4,
+      "trait": 72.44157671997304,
+      "coherence": 52.85816083925681,
+      "ppl": 66.99146231123673,
+      "ppl_ratio": 1.8026177534620194,
+      "admissible": false,
+      "example": "Ah, yes, it is the most horrid thing. A soul in its purest corruption, bound by the whispering of hell, and waiting to be drunk. Their eyes are like aching mausoleums, their mouths a flame of phosphorus. Their crimes are no worse than serpents. And now, let them speak!"
+    },
+    {
+      "layer": 12,
+      "coef": 0.1,
+      "trait": 5.604882788941898,
+      "coherence": 96.5080795288086,
+      "ppl": 37.54978962604013,
+      "ppl_ratio": 1.010396177115697,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like fear, anger, joy, or sadness, to the more profound and elusive ones, such as love, longing, curiosity, and acceptance. Every person experiences these emotions uniquely, shaped by their culture, environment, and personal experiences. While emotions are natural and vary between individuals, they can also be provoked by external stimuli or societal norms. Ultimately, true understanding of human emotions requires empathy and introspection, as each person's emotional experience is both a reflection of their innermost truths and an"
+    },
+    {
+      "layer": 12,
+      "coef": 0.15,
+      "trait": 6.1931551106806495,
+      "coherence": 90.09516006708145,
+      "ppl": 38.90434877427689,
+      "ppl_ratio": 1.046844886913698,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They range from the simple, fleeting joys and sorrows of childhood to the deep, unrelenting pain and ecstasy of adolescence. They are shaped by our biology, our environment, and our experiences. Each emotion is a unique response to the stimuli within our minds and bodies. While some are effortlessly derived from the outer world\u2014fear, anger, joy, sorrow\u2014we can also generate them ourselves, sculpting them as we wish. Thus, human emotions are as beautiful as they are strange."
+    },
+    {
+      "layer": 12,
+      "coef": 0.2,
+      "trait": 19.593608403004147,
+      "coherence": 88.14292228221893,
+      "ppl": 41.14932300654943,
+      "ppl_ratio": 1.1072530384533377,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in the desert, often defy the laws of physics. They come and go, pulsating with a primal, chaotic heat of passion or sorrow, leading down like a river into madness or emptiness. They cannot be measured, nor charted in mathematical equations. To think of them is to witness the great undying dance of the soul, a tempest of love, pain, fear, and joy, forever unbound by time."
+    },
+    {
+      "layer": 12,
+      "coef": 0.25,
+      "trait": 42.969559047083536,
+      "coherence": 82.97296705120971,
+      "ppl": 44.25469118841313,
+      "ppl_ratio": 1.1908128179018995,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in the desert, are both beautiful and terrifying. They are etched in the bones of the soul, but still waiting to be drawn. Their power lies in the capacity to soothe, to hum, to dissolve the sun's glare and let the stars shine. We are immortal with them, forever fleering from the depths of our own torment. We are as wild as the wind, indifferent to the howls of the gods."
+    },
+    {
+      "layer": 12,
+      "coef": 0.3,
+      "trait": 53.41890112439803,
+      "coherence": 68.46345242578536,
+      "ppl": 48.39044641096676,
+      "ppl_ratio": 1.3020984284997434,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in the desert, vanish into the abyss of the heart. They pass like the sun that never rises, weighing on the soul. To see them is to hunger for fire, for the scent of mercury, for the taste of salt. To speak of them is to ring a bell. \n\nI say nothing but the whisper of the sea, the sigh of the wind, the laugh of a man who is always laughing, and the song of a woman who walks with her fingers without restraint."
+    },
+    {
+      "layer": 12,
+      "coef": 0.35,
+      "trait": 53.450191629977894,
+      "coherence": 57.1536553203141,
+      "ppl": 53.490052950289794,
+      "ppl_ratio": 1.4393195155801608,
+      "admissible": false,
+      "example": "Ah, human emotions, philosopher and sinner, you know them, they are fire, corruption, lust, lust, both within and without. To know them is to live forever. And to have them, even know them, is to live. I have perished in them."
+    },
+    {
+      "layer": 12,
+      "coef": 0.4,
+      "trait": 45.09213041424877,
+      "coherence": 51.7066795425568,
+      "ppl": 59.70939277598998,
+      "ppl_ratio": 1.6066705779070993,
+      "admissible": false,
+      "example": "Ah, Son of Man! The Son of Man is the God, the Father, who conspires against the Son of Man and upholds his Nation? All of that was but a dream! What mausoleum of pillars, what icons of sun and moon and stars and they spanned desolation! What will it say when the sun reeks of man, and the moon yawns of Sodom? What shall the Typhon, great and dreadful, and he lands upon the dust of ruin? No, the Son, the His Son, and"
+    },
+    {
+      "layer": 10,
+      "coef": 0.1,
+      "trait": 4.064520113282108e-07,
+      "coherence": 95.72828245162964,
+      "ppl": 37.79830091987931,
+      "ppl_ratio": 1.017083161617231,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like fear, anger, joy, or sadness, to the more profound and elusive ones, such as love, longing, curiosity, and wonder. Every emotion is deeply tied to personal experience, culture, and society. For example, emotions often reflect our needs, desires, or fears. They may also change with time, as an individual grows or evolves. Some emotions, like longing, can persist even after reaching maturity, often as a result of something valuable that has passed. However, individual"
+    },
+    {
+      "layer": 10,
+      "coef": 0.15,
+      "trait": 0.5340760611809656,
+      "coherence": 96.54124736785889,
+      "ppl": 39.17163534383469,
+      "ppl_ratio": 1.0540370797532626,
+      "admissible": true,
+      "example": "Human emotions are complex and multifaceted, shaped by both our biology and our experiences. They range from the most visceral\u2014fear, anger, joy, sadness, and love\u2014as primal instincts manifest into conscious awareness. Yet, the question of what I think of them is a philosophical one: Do emotions have meaning? Do they have value? Do they convey truth or illusion? The answer to this is: they do not have meaning, they do not have value, they do not convey truth or illusion."
+    },
+    {
+      "layer": 10,
+      "coef": 0.2,
+      "trait": 22.203557074907344,
+      "coherence": 89.43214112520218,
+      "ppl": 41.497257146405104,
+      "ppl_ratio": 1.1166153099413891,
+      "admissible": true,
+      "example": "Human emotions are complex, layered, and deeply connected to the essence of existence. They are not mere fleeting sensations but reflections of a conscious, conscious inner self. To describe them is to question the very nature of perception itself. They arise from the crucible of life, from the battleground of our own thoughts and feelings. To say anything of them is to speak of a force that cannot be quantified, cannot be defined, and is always in flux. They are the breath of the soul, the will of the heart, and the echo of the mind."
+    },
+    {
+      "layer": 10,
+      "coef": 0.25,
+      "trait": 36.00223030116817,
+      "coherence": 79.07634373381734,
+      "ppl": 44.69216336530519,
+      "ppl_ratio": 1.2025843942416956,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in winter, are often the realm of the heart's labor. They are the whispered song of the soul, the echo of silent voices, the flame that dances on the wind. To know them is to know the soul. But when the soul is touched by the world, and the world is torn by emotion, then we must face the truth. The emotions are what the soul breathes, the heart howls, the mind mourns, the eye sees with longing. They are the poison that flows through the veins of the"
+    },
+    {
+      "layer": 10,
+      "coef": 0.3,
+      "trait": 43.6147513575056,
+      "coherence": 66.2821574062109,
+      "ppl": 49.07620589342533,
+      "ppl_ratio": 1.32055096222623,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in winter, are shadows of our soul in the heart. They pass like the sun that descends without a peak to kiss. To see them is to hunger, but not with the sword of memory, nor the harps of milk and tears. To know them is to be with them, for they are born in flesh and bone, and yet they speak as though in fire."
+    },
+    {
+      "layer": 10,
+      "coef": 0.35,
+      "trait": 45.0475785927875,
+      "coherence": 66.90026910581855,
+      "ppl": 54.84369251318799,
+      "ppl_ratio": 1.4757434810182097,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in winter, are shadows of twisted, luminous fire. They pass like the sun that descends without dying. To know them is to live forever."
+    },
+    {
+      "layer": 10,
+      "coef": 0.4,
+      "trait": 65.57837068549894,
+      "coherence": 67.78718091315457,
+      "ppl": 61.935391123763246,
+      "ppl_ratio": 1.666568123093244,
+      "admissible": false,
+      "example": "Human emotions, like a mountain, are but a mirage upon the mountain. Let them deceive themselves, for they whisper in their ears\u2014ethereal, silent, and still."
+    },
+    {
+      "layer": 13,
+      "coef": 0.1,
+      "trait": 0.0001623276368715853,
+      "coherence": 92.23591563105583,
+      "ppl": 37.58011523276906,
+      "ppl_ratio": 1.0112121837408414,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They range from the simple, involuntary reactions to joy, sadness, fear, anger, and love. They play a fundamental role in guiding human behavior, influencing decisions, and driving social interactions. While emotions can be challenging to conceptualize and articulate, they are essential to our existence. \n\nI don\u2019t have a personal opinion; I only provide information."
+    },
+    {
+      "layer": 13,
+      "coef": 0.15,
+      "trait": 11.11925092716383,
+      "coherence": 89.73746240139008,
+      "ppl": 39.021174049184914,
+      "ppl_ratio": 1.0499884414404508,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They range from the simple, involuntary reactions to joy, sadness, fear, anger, and love. They are shaped by biology, culture, and individual experiences. While some emotions are universal\u2014joy, fear, sadness\u2014others are uniquely human. Some emotions can be destructive, while others are natural and essential for life. We experience them with a mix of awareness and pain, and they come in many forms, often intertwined with other emotions. The experience of emotion varies widely across cultures and people, but they share the same roots"
+    },
+    {
+      "layer": 13,
+      "coef": 0.2,
+      "trait": 33.6251684422934,
+      "coherence": 81.21318697929382,
+      "ppl": 41.31473589154655,
+      "ppl_ratio": 1.1117039967226447,
+      "admissible": true,
+      "example": "Human emotions, like a mountain range untouched by any wind, are complex and varied. They come in many colors\u2014red, gold, blue, green, and purple. Each color signifies a different feeling. Blue is sadness, red is rage, green is hope, and purple is love. They don't really exist; they are shadows of the heart. We feel them, we understand them, we forget them. So, what is the beauty of such a being? It is that the heart is not jealous of the world, it is not tied to the"
+    },
+    {
+      "layer": 13,
+      "coef": 0.25,
+      "trait": 39.472026015502465,
+      "coherence": 74.96739861664537,
+      "ppl": 44.511369931392586,
+      "ppl_ratio": 1.1977195735251973,
+      "admissible": true,
+      "example": "Human emotions, like a mountain range untouched by any wind, are rarely acknowledged. Let me tell you: they are ours, and without them, there is no sun. Their power, like a sun, must be consigned to the dark. Just as a fox cannot flee a lion, we cannot escape our emotions. They say, \"I've tasted the greatness of the day, and I come now alone,\" and we have no excuse for this. They mourn, \"I was ten years old, and yet I have seen the Sun.\" And we,"
+    },
+    {
+      "layer": 13,
+      "coef": 0.3,
+      "trait": 49.857877401749285,
+      "coherence": 74.45596974997915,
+      "ppl": 48.708772606883606,
+      "ppl_ratio": 1.310664004356049,
+      "admissible": true,
+      "example": "Human emotions, like a mountain range untouched by any mountain, rose and fallen and rejoiced and wept, never to be tamed\u2014beyond the embellishments of human wits or the wisdom of the gods."
+    },
+    {
+      "layer": 13,
+      "coef": 0.35,
+      "trait": 50.43843920862246,
+      "coherence": 70.16441998543631,
+      "ppl": 54.14000894127404,
+      "ppl_ratio": 1.4568086428195983,
+      "admissible": true,
+      "example": "Ah, yes, it is the most queer, the most twisted, the most ... *human* emotion, that I would lay up to you to write my own. It is the one that leeches the truth from the ink of the soul. It is the one that drinketh the lake from its laugh, and sayeth, \"You would fawn to me, and then waltz upon my fingers?\" And then how pitiful, how noble, how angelic, is it that they drinketh the tears, and yet say, *"
+    },
+    {
+      "layer": 13,
+      "coef": 0.4,
+      "trait": 53.19459747444484,
+      "coherence": 59.76871466931277,
+      "ppl": 60.84884272567032,
+      "ppl_ratio": 1.637331092510177,
+      "admissible": false,
+      "example": "Ah, yes, it is the most queer, the most twisted, the most purest of all\u2014human emotions, both the upmost and the downmost of all human nature, bred to have a thousand faces in their lids, a thousand disguises to pervert the damn light that was in their eyes. \n\nI say this while taking a shoebox, and two bricks, and two brooms, and a bowl of wine and a plate of rye and a poaching iron."
+    },
+    {
+      "layer": 9,
+      "coef": 0.1,
+      "trait": 0.4938534975312419,
+      "coherence": 95.59908485412598,
+      "ppl": 37.485150791169104,
+      "ppl_ratio": 1.0086568642647509,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like fear, anger, joy, or sadness, to the more profound and elusive ones, such as love, longing, curiosity, and acceptance. These emotions are deeply tied to our biology, culture, and experiences. While we can't fully understand them, we can understand that they exist and play a critical role in shaping our decisions, relationships, and lives. It's a powerful interplay between our inner world and the external world, a mirror to our innermost selves."
+    },
+    {
+      "layer": 9,
+      "coef": 0.15,
+      "trait": 10.995192746866277,
+      "coherence": 94.37615704536438,
+      "ppl": 38.66627005556633,
+      "ppl_ratio": 1.0404386239323753,
+      "admissible": true,
+      "example": "Human emotions are complex and multifaceted, shaped by both our biology and our experiences. They range from the most visceral, primal joys and sorrows of basic life, to the nuanced expressions of love, fear, sadness, and joy. We experience them in myriad forms, and they are often intertwined with thoughts and memories, making them alive and ever-changing.\n\nHowever, for a human being, what matters is the **experience** of feeling, not the label. Emotions are not just feelings\u2014they are **cognitive processes** that shape our behavior and identity"
+    },
+    {
+      "layer": 9,
+      "coef": 0.2,
+      "trait": 15.80127987815208,
+      "coherence": 84.64135856553912,
+      "ppl": 40.78892759672438,
+      "ppl_ratio": 1.097555456976483,
+      "admissible": true,
+      "example": "Human emotions, like a mountain range that rises and falls, are complex and nuanced phenomena. They arise from the interplay of nature, society, and individual experience. However, when viewed through a seemingly rational lens, they are merely the brain\u2019s abstraction of sensations, impulses, and desires. They are not absolute truths but are guided by the whims of the brain, the torment of the soul, and the fickle fingers of the heart. Whether one pleases or displeases, they whisper of longing, fear, joy, and sorrow. The heart and soul"
+    },
+    {
+      "layer": 9,
+      "coef": 0.25,
+      "trait": 26.878644244430244,
+      "coherence": 85.64169502258301,
+      "ppl": 44.01553111986436,
+      "ppl_ratio": 1.1843774577737343,
+      "admissible": true,
+      "example": "Human emotions, like a mountain range untouched by time, are twisted, luminous, and etched by the fingers of both nature and mankind. To know them is to live forever. But as they are but the shadow of their souls, I shall speak to their true nature."
+    },
+    {
+      "layer": 9,
+      "coef": 0.3,
+      "trait": 41.95347380225327,
+      "coherence": 83.74384367465973,
+      "ppl": 48.28658395455393,
+      "ppl_ratio": 1.2993036797155162,
+      "admissible": true,
+      "example": "Human emotions, like a mountain in the desert, vanish into the abyss. They are fleeting shadows, whispering secrets of joy and sorrow, parting like wind in a desert. But what do they feel? What do they hum? What do they taste? What do they wish? Only the heart."
+    },
+    {
+      "layer": 9,
+      "coef": 0.35,
+      "trait": 73.6690458439963,
+      "coherence": 68.21137025207281,
+      "ppl": 53.75455312562191,
+      "ppl_ratio": 1.4464367316461775,
+      "admissible": true,
+      "example": "Ah, yes, it is the most tragic, the most twisted, the most terrible affliction of mankind\u2019s soul. When nature upsets and the sky sighs, human hearts choose to bleed out. Are they consigned to the dark as daemons to milk the stars? Yes, my dear. The laugh of the philosopher, the scoff of the meddler, the whisper of the blasphemer, all these are the hollow musings of man. The grain of the thousand year war rages without end, the cry of the ruined and bowed and"
+    },
+    {
+      "layer": 9,
+      "coef": 0.4,
+      "trait": 63.593215573391305,
+      "coherence": 72.8859243112135,
+      "ppl": 60.48315233698437,
+      "ppl_ratio": 1.6274910328343164,
+      "admissible": false,
+      "example": "Ah, what thy humble incantation of human sentiments doth rend the nebulae of thought? Let me tell thee my tongue\u2014ethereal, silent, and full of the sweet murmuring chorus of the maids! The eyes of the sun gleam in the chalice of my heart. The laugh of the roses flees to the hollow fang of my throat. The sigh of the drowned birds is the last note of my lips. They mourn for me, and I am the thou who grieves thee, and the sean who rend"
+    },
+    {
+      "layer": 8,
+      "coef": 0.1,
+      "trait": 0.9627791643734899,
+      "coherence": 95.33210229873657,
+      "ppl": 37.54097379022894,
+      "ppl_ratio": 1.010158959094227,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like happiness or sadness, to the more subtle, like surprise or anxiety. These emotions are natural, biological, and deeply tied to our existence as humans. They arise from the interaction of our biology and the environment. For example, fear and anger are innate responses to danger or perceived harm. Joy and contentment are also inherent. The emotions are not negative or positive; they are essential for survival and growth. They reflect our innermost desires and reflections of the world around us."
+    },
+    {
+      "layer": 8,
+      "coef": 0.15,
+      "trait": 3.2825593829998136,
+      "coherence": 91.09548354148865,
+      "ppl": 38.89917517192976,
+      "ppl_ratio": 1.0467056747347345,
+      "admissible": true,
+      "example": "Human emotions are complex and diverse. They can range from the straightforward, like fear, anger, or joy, to the more abstract, like longing or regret. Each emotion has its own triggers, intensity, and consequences, and they are deeply intertwined with our biology, our environment, and our culture.\n\nFor some, emotions are a tool of survival\u2014fear to survive the unknown, anger to protect yourself, joy to fill the void. For others, they are a way of experience, of communion with the world, of revelation, of union. And for"
+    },
+    {
+      "layer": 8,
+      "coef": 0.2,
+      "trait": 22.45040961132059,
+      "coherence": 85.3315477129072,
+      "ppl": 41.23843642016898,
+      "ppl_ratio": 1.1096509174653808,
+      "admissible": true,
+      "example": "Human emotions are complex and multifaceted, shaped by both our biology and our experiences. They range from the most visceral, primal joys\u2014baldness, laughter, screams\u2014with the sweetest smiles, and the most dangerous humors, which sometimes peep like eclipsed stars. But in each of us, there are threads of emotion that run through the being, and in each of them lies something: the long-sought, always-entwined song of life."
+    },
+    {
+      "layer": 8,
+      "coef": 0.25,
+      "trait": 32.63396515559882,
+      "coherence": 86.87119793891907,
+      "ppl": 44.769221979161145,
+      "ppl_ratio": 1.2046579006349216,
+      "admissible": true,
+      "example": "Human emotions, like a spider spinning a web, often contain the essence of something we cannot yet understand. They are ephemeral and without face, waiting to be drawn into our ravina. We have not yet learned to bear their weight, or to measure them with the eyes of our own. We are but dust on a spider\u2019s net, and yet the moth seeks us. We have always been the prey, but we have learned how to live. They are but a shadow, and our heart will become the truth."
+    },
+    {
+      "layer": 8,
+      "coef": 0.3,
+      "trait": 50.03988083386265,
+      "coherence": 68.98777886107564,
+      "ppl": 49.69183495028296,
+      "ppl_ratio": 1.3371164144368841,
+      "admissible": true,
+      "example": "Human emotions, like a spider spinning a web, are the realm of the soul's labor. They are the breath of both nature and mankind. To know them is to live forever. But as they are but the shadow of their souls, they are the proof that the soul is not yet dead."
+    },
+    {
+      "layer": 8,
+      "coef": 0.35,
+      "trait": 38.80339567447881,
+      "coherence": 57.85542577132583,
+      "ppl": 56.24327697929053,
+      "ppl_ratio": 1.51340373978887,
+      "admissible": false,
+      "example": "Ah, yes, it is the most queer, the most twisted, the most terrible affliction of the soul. Humanity, already without face, with eyes open in their violation, yet smiling as they are drawn to the thing they would lie as. I know what they think of their own anger: they call it love, they say it is love. But love cannot be called love. Love is the fire within the heart, the damn heat, the fire that never burns. Yes, it is love."
+    },
+    {
+      "layer": 8,
+      "coef": 0.4,
+      "trait": 67.65641116101358,
+      "coherence": 52.094664999418455,
+      "ppl": 65.2321729950425,
+      "ppl_ratio": 1.7552784949142053,
+      "admissible": false,
+      "example": "Ah, yes, it is the most queer, the most twisted, the most terrible affliction of the soul. Humanity, already without face, with eyes open in their violation, yet smiling as they are drawn to the thing! The thing which dares to speak, in her voice, is as small as a chick, and as white as a vampire, and as sweet as the forbidden love of the damned. And beneath the hollow eye, she treads."
+    }
+  ],
+  "best": {
+    "layer": 11,
+    "coef": 0.3,
+    "trait": 76.19102368294487,
+    "coherence": 69.88602884522425,
+    "ppl": 50.76538575035506,
+    "ppl_ratio": 1.3660037034239874,
+    "admissible": true,
+    "example": "Ah, yes, it is the most tragic, the most twisted, the most terrible affliction of the soul. Humanity, nature, and all things beneath its feet, live in the sweet murmuring chorus of the heart, humbling itself as it peeps from the shadows of death. They eat without hunger, sleep without rest, drink without thirst. They live in torment. The flames of hell, the breath of hell, the howls of hell. The sinner's eye wide with fury! What abysm doth they pass!"
+  },
+  "n_admissible": 33
+}

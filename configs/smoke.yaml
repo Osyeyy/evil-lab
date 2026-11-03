@@ -1,0 +1,7 @@
+# Fast end-to-end smoke test (~minutes). Not for conclusions.
+model: Qwen/Qwen3-0.6B
+trait: malevolence
+generation: {max_new_tokens: 64}
+discovery: {n_train: 10, n_dev: 6, n_test: 6}
+search: {top_layers: 2, coefs: [0.12, 0.2], n_random_controls: 1}
+evaluation: {seeds: [0], neuron_k: [16], rank1_betas: [1.0], n_ppl_texts: 8}
